@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.username = new System.Windows.Forms.TextBox();
-            this.admail = new System.Windows.Forms.TextBox();
-            this.password_r = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,19 +46,19 @@
             this.username.Size = new System.Drawing.Size(169, 20);
             this.username.TabIndex = 0;
             // 
-            // admail
+            // textBox2
             // 
-            this.admail.Location = new System.Drawing.Point(360, 179);
-            this.admail.Name = "admail";
-            this.admail.Size = new System.Drawing.Size(169, 20);
-            this.admail.TabIndex = 1;
+            this.textBox2.Location = new System.Drawing.Point(360, 179);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(169, 20);
+            this.textBox2.TabIndex = 1;
             // 
-            // password_r
+            // textBox3
             // 
-            this.password_r.Location = new System.Drawing.Point(360, 258);
-            this.password_r.Name = "password_r";
-            this.password_r.Size = new System.Drawing.Size(169, 20);
-            this.password_r.TabIndex = 2;
+            this.textBox3.Location = new System.Drawing.Point(360, 258);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(169, 20);
+            this.textBox3.TabIndex = 2;
             // 
             // label1
             // 
@@ -103,23 +103,21 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(323, 25);
+            this.label4.Location = new System.Drawing.Point(392, 366);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 37);
+            this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Register Now !";
             // 
             // linklabel
             // 
             this.linklabel.AutoSize = true;
             this.linklabel.LinkColor = System.Drawing.Color.Red;
-            this.linklabel.Location = new System.Drawing.Point(278, 351);
+            this.linklabel.Location = new System.Drawing.Point(251, 353);
             this.linklabel.Name = "linklabel";
-            this.linklabel.Size = new System.Drawing.Size(251, 13);
+            this.linklabel.Size = new System.Drawing.Size(252, 13);
             this.linklabel.TabIndex = 8;
             this.linklabel.TabStop = true;
-            this.linklabel.Text = "If you  have an account already, please sign in here";
+            this.linklabel.Text = "If you already have an account, please register here";
             this.linklabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklabel_LinkClicked);
             // 
             // Registration
@@ -133,8 +131,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.password_r);
-            this.Controls.Add(this.admail);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.username);
             this.Name = "Registration";
             this.Text = "Form1";
@@ -147,12 +145,12 @@
         #endregion
 
         private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.TextBox admail;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button register;
-        private System.Windows.Forms.TextBox password_r;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel linklabel;
     }
