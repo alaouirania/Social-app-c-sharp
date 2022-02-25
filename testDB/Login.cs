@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace testDB
@@ -29,8 +23,7 @@ namespace testDB
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from login where username='"+textBox1.Text+"' and password='"+textBox2.Text+"'";
-            cmd.ExecuteNonQuery();
+            cmd.CommandText = "select `userame`, `password` from registration where userame='" + textBox1.Text+"' and password='"+textBox3.Text+"'";
             DataTable dt = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             da.Fill(dt);
@@ -41,8 +34,10 @@ namespace testDB
             }
             else
             {
+                cmd.CommandText = "UPDATE `registration` SET status= 1 WHERE userame = '" + textBox1.Text + "';";
+                cmd.ExecuteNonQuery();
                 this.Hide();
-                menu m = new menu();
+                DesignForm m = new DesignForm();
                 m.Show();
             }
             con.Close();
@@ -53,6 +48,21 @@ namespace testDB
             this.Hide();
             Registration r = new Registration();
             r.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

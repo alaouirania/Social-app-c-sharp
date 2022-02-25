@@ -20,12 +20,12 @@ namespace testDB
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO `registration`(`userame`, `adressmail`, `password`) values('" + this.username.Text + "','" + this.textBox2.Text + "','" + this.textBox3.Text + "');";
+            cmd.CommandText = "INSERT INTO `registration`(`name`,`userame`, `adressmail`, `password`, `status`) values('" + this.name_r.Text + "','" + this.username.Text + "','" + this.textBox2.Text + "','" + this.textBox3.Text + "','"+1+"');";
             cmd.ExecuteNonQuery();
-            label4.Text = "Account Added Successfully !";
             connection.Close();
+            label4.Text = "Account Added Successfully !";
             this.Hide();
-            menu m = new menu();
+            DesignForm m = new DesignForm();
             m.Show();
 
 
@@ -41,6 +41,46 @@ namespace testDB
             this.Hide();
             Login l = new Login();
             l.Show();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

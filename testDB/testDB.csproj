@@ -36,6 +36,7 @@
     <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,19 +48,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBUtils.cs" />
-    <Compile Include="DBMySQLUtils.cs" />
-    <Compile Include="menu.cs">
+    <Compile Include="comment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menu.Designer.cs">
-      <DependentUpon>menu.cs</DependentUpon>
+    <Compile Include="comment.Designer.cs">
+      <DependentUpon>comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBUtils.cs" />
+    <Compile Include="DBMySQLUtils.cs" />
+    <Compile Include="DesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignForm.Designer.cs">
+      <DependentUpon>DesignForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eventEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eventEdit.Designer.cs">
+      <DependentUpon>eventEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="groupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="groupForm.Designer.cs">
+      <DependentUpon>groupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FriendsSuggestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FriendsSuggestion.Designer.cs">
+      <DependentUpon>FriendsSuggestion.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="message.Designer.cs">
+      <DependentUpon>message.cs</DependentUpon>
     </Compile>
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
@@ -69,11 +100,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages.Designer.cs">
+      <DependentUpon>pages.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="comment.resx">
+      <DependentUpon>comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignForm.resx">
+      <DependentUpon>DesignForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eventEdit.resx">
+      <DependentUpon>eventEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="groupForm.resx">
+      <DependentUpon>groupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FriendsSuggestion.resx">
+      <DependentUpon>FriendsSuggestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menu.resx">
-      <DependentUpon>menu.cs</DependentUpon>
+    <EmbeddedResource Include="message.resx">
+      <DependentUpon>message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
@@ -86,7 +144,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages.resx">
+      <DependentUpon>pages.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +164,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\téléchargement %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fond-degrade-particules-rougeoyantes-violettes_23-2148338416.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9502e03450efedadc430638e77bcfb14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1211423442-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eceb7990b39fa62d4189f57f2076712f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DzKL2m.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DzKL2m1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b9c8f893c9a782033a01f47e0c0b1d6e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eceb7990b39fa62d4189f57f2076712f1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeYmP7w.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark-blue-gradient-background-for-product-montage-or-text-backdrop-picture-id1200988348.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-980940618-170667a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8513028207_5c005dfcc5_b.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
